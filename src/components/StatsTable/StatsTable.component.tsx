@@ -9,6 +9,7 @@ export function StatsTable({ columns, data }: StatsTableProps) {
       <table className="min-w-full text-sm text-left">
         <thead className="bg-slate-100 border-b">
           <tr>
+            <th>GP</th>
             {columns.map((col) => (
               <th key={col} className="px-4 py-2 font-semibold text-slate-700">
                 {col}
@@ -20,6 +21,9 @@ export function StatsTable({ columns, data }: StatsTableProps) {
         <tbody>
           {data.map((row, rowIndex) => (
             <tr key={rowIndex} className="border-b hover:bg-slate-50">
+              <td className="px-4 py-2 font-semibold text-slate-700">
+                {rowIndex + 1}
+              </td>
               {row.map((value, colIndex) => (
                 <td key={colIndex} className="px-4 py-2">
                   {value}

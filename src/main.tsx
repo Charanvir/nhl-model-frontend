@@ -8,7 +8,7 @@ const queryClient = new QueryClient();
 
 createRoot(document.getElementById("root")!).render(
   <QueryClientProvider client={queryClient}>
-    <BrowserRouter basename="/NHL-Model-Client/">
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </QueryClientProvider>
